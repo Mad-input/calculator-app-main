@@ -233,4 +233,8 @@ body.theme-3 .calculator-header .set-theme .range-theme::-moz-range-thumb {
   .calculator {
     width: 300px;
   }
+
+  .calculator-controls .control.func{
+    font-size: 18px;
+  }
 }
