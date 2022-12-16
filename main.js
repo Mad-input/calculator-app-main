@@ -51,6 +51,8 @@ btnReset.addEventListener("click", () => {
 });
 
 btnEqual.addEventListener("click", () => {
+  if(display.innerText == "") return
+  else
   display.innerText = eval(display.innerText);
 });
 
