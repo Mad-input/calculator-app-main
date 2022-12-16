@@ -60,6 +60,6 @@ controls.forEach((control) => {
   control.addEventListener("click", () => {
     if (control.dataset.type !== "number" && control.dataset.type !== "symbol")
       return;
-    display.innerHTML += control.innerHTML; 
+    display.innerHTML += control.innerHTML
   });
 });
