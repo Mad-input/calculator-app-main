@@ -13,6 +13,7 @@ const load = () => {
   const storage = localStorage.getItem("BodyTheme");
 
   if (storage == "1" || storage == "2" || storage == "3") {
+    range.value = storage
     if (storage == "1") {
       body.classList.remove("theme-2", "theme-3");
       body.classList.add("theme-1");
@@ -25,7 +26,6 @@ const load = () => {
     }
   } else body.classList.add("theme-1");
 
-  range.value = storage
 };
 
 const storage = (value) => {
