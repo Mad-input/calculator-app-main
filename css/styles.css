@@ -1,0 +1,236 @@
+@import url('./variables.css');
+/*Font*/
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;500;700&display=swap');
+
+* {
+  margin     : 0;
+  padding    : 0;
+  box-sizing : border-box;
+  font-family: 'League Spartan', sans-serif;
+  font-weight: 700;
+}
+
+body {
+  display        : flex;
+  justify-content: center;
+  align-items    : center;
+  flex-direction : column;
+  min-height     : 100vh;
+
+  background: var(--bg-body-t1);
+  color     : var(--text-colorOne-t1);
+
+  transition: .3s;
+}
+
+.calculator {
+  padding: 8px;
+  width  : 350px;
+
+  transition: .3s;
+}
+
+.calculator-header {
+  display        : flex;
+  align-items    : center;
+  justify-content: space-between;
+  padding        : 10px;
+}
+
+.calculator-header .title-header {
+  font-size: 23px;
+}
+
+.calculator-header .select-theme {
+  display    : flex;
+  align-items: flex-end;
+}
+
+.calculator-header .select-theme h3 {
+  font-size     : 10px;
+  letter-spacing: 1px;
+}
+
+.calculator-header .set-theme {
+  display        : flex;
+  align-items    : center;
+  justify-content: space-between;
+  flex-direction : column;
+
+  margin-left: 20px;
+}
+
+.calculator-header .set-theme label {
+  font-size      : 10px;
+  width          : 100%;
+  display        : flex;
+  justify-content: space-around;
+}
+
+.calculator-header .set-theme .range-theme {
+  width        : 55px;
+  height       : 20px;
+  padding      : 4px;
+  appearance   : none;
+  border-radius: 10px;
+  background   : var(--bg-keypad-t1);
+}
+
+.calculator-header .set-theme .range-theme::-moz-range-thumb {
+  background: var(--bg-control-red-t1);
+  border    : none;
+  cursor    : pointer;
+
+  transition: .3s;
+}
+
+/* ? ========== Display ========== */
+
+.calculator-display {
+  height: 90px;
+  width : 100%;
+  margin: 20px 0;
+
+  border-radius: var(--rounded);
+  background   : var(--bg-display-t1);
+
+  font-size  : 40px;
+  padding    : 0 20px;
+  text-align : right;
+  line-height: 95px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  user-select: none;
+}
+
+/* ? ========== Key Pad ========== */
+
+.calculator-controls {
+  background   : var(--bg-keypad-t1);
+  border-radius: var(--rounded);
+  padding      : 20px;
+
+  display              : grid;
+  place-content        : center;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows   : repeat(5, 45px);
+  gap                  : 10px;
+}
+
+.calculator-controls .control {
+  border: none;
+
+  background: var(--bg-control-grayish-t1);
+
+  color        : var(--text-colorTwo-t1);
+  border-radius: 4px;
+  border-bottom: 4px solid var(--bc-control-grayish-t1);
+
+  font-size: 25px;
+
+  cursor: pointer;
+}
+
+.calculator-controls .control:active {
+  transform: scale(.95);
+}
+
+.calculator-controls .control.col-2 {
+  grid-column: span 2;
+}
+
+.calculator-controls .control.func {
+  background  : var(--bg-control-blue-t1);
+  border-color: var(--bc-control-blue-t1);
+  color       : #fff;
+}
+
+.calculator-controls .control.equal {
+  background  : var(--bg-control-red-t1);
+  border-color: var(--bc-control-red-t1);
+  color       : #fff;
+}
+
+/* ? ========== Theme 2 ========== */
+
+body.theme-2 {
+  background: var(--bg-body-t2);
+  color     : var(--text-colorTwo-t2);
+}
+
+body.theme-2 .calculator-controls {
+  background: var(--bg-keypad-t2);
+}
+
+body.theme-2 .calculator-display {
+  background: var(--bg-display-t2);
+}
+
+body.theme-2 .calculator-controls .control.func {
+  background  : var(--bg-control-cyan-t2);
+  border-color: var(--bc-control-cyan-t2);
+}
+
+body.theme-2 .calculator-controls .control.equal {
+  background  : var(--bg-control-orange-t2);
+  border-color: var(--bc-control-orange-t2);
+}
+
+body.theme-2 .calculator-controls .control {
+  background: var(--bg-control-grayish-t2);
+  border-color: var(--bc-control-grayish-t2)
+}
+
+body.theme-2 .calculator-header .set-theme .range-theme {
+  background: var(--bg-keypad-t2);
+}
+
+body.theme-2 .calculator-header .set-theme .range-theme::-moz-range-thumb {
+  background: var(--bg-control-orange-t2);
+}
+
+/* ? ========== Theme 3 ========== */
+
+body.theme-3 {
+  background: var(--bg-body-t3);
+  color     : var(--text-yellow-t3);
+}
+
+body.theme-3 .calculator-controls {
+  background: var(--bg-keypad-t3);
+}
+
+body.theme-3 .calculator-display {
+  background: var(--bg-display-t3);
+}
+
+body.theme-3 .calculator-controls .control.func {
+  background  : var(--bg-control-dviolet-t3);
+  border-color: var(--bc-control-vivid-t3);
+}
+
+body.theme-3 .calculator-controls .control.equal {
+  background  : var(--bg-control-pure-t3);
+  border-color: var(--bc-control-soft-t3);
+  color: black;
+}
+
+body.theme-3 .calculator-controls .control {
+  background: var(--bg-control-violet-t3);
+  border-color: var(--bc-control-violet-t3);
+  color: var(--text-yellow-t3);
+}
+
+body.theme-3 .calculator-header .set-theme .range-theme {
+  background: var(--bg-keypad-t3);
+}
+
+body.theme-3 .calculator-header .set-theme .range-theme::-moz-range-thumb {
+  background: var(--bg-control-pure-t3);
+}
+
+@media screen and (max-width: 375px){
+  .calculator {
+    width: 300px;
+  }
+}

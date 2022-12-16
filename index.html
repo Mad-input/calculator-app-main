@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <div class="calculator">
+    <div class="calculator-header">
+      <h2 class="title-header">calc</h2>
+      <div class="select-theme">
+        <h3 class="">THEME</h3>
+        <div class="set-theme">
+          <label for="RangeTheme"><span>1</span><span>2</span><span>3</span></label>
+          <input class="range-theme" id="RangeTheme" type="range" min="1" max="3" value="1" >
+        </div>
+      </div>
+    </div>
+    <div class="calculator-display" id="display">
+      <!-- content Javascript -->
+      
+    </div>
+    <div class="calculator-controls">
+      <button class="control" data-type="number">7</button>
+      <button class="control" data-type="number">8</button>
+      <button class="control" data-type="number">9</button>
+      <button class="control func" id="del" data-type="func">DEL</button>
+      <button class="control" data-type="number">4</button>
+      <button class="control" data-type="number">5</button>
+      <button class="control" data-type="number">6</button>
+      <button class="control" data-type="symbol">+</button>
+      <button class="control" data-type="number">1</button>
+      <button class="control" data-type="number">2</button>
+      <button class="control" data-type="number">3</button>
+      <button class="control" data-type="symbol">-</button>
+      <button class="control" data-type="number">.</button>
+      <button class="control" data-type="number">0</button>
+      <button class="control" data-type="symbol">/</button>
+      <button class="control" data-type="symbol">X</button>
+      <button class="control func col-2" id="reset" data-type="func">RESET</button>
+      <button class="control equal col-2" id="equal" data-type="func">=</button>
+    </div>
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Miguel Contreras</a>.
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
