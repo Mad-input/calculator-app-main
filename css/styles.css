@@ -229,6 +229,10 @@ body.theme-3 .calculator-header .set-theme .range-theme::-moz-range-thumb {
   background: var(--bg-control-pure-t3);
 }
 
+body.theme-3 .calculator-header .set-theme .range-theme::-webkit-range-thumb {
+  background: var(--bg-control-pure-t3);
+}
+
 @media screen and (max-width: 375px){
   .calculator {
     width: 300px;
